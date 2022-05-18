@@ -4,6 +4,7 @@ export interface Content {
   title : string;
   body? : string;
   author : string;
-  imagelink? : string;
-  type : string[];
+  imagelink?: string;
+  type : string;
+  hashtags?: Array<string>;
 }
