@@ -1,2 +1,4 @@
-<app-content-card *ngFor="let contentItem of seriesList; last as isLast" [contentItem]="contentItem" [class.is-last]="isLast"></app-content-card>
+
+<h1> Web Series</h1>
+<app-content-card *ngFor="let contentItem of seriesList; odd as odd" [contentItem]="contentItem" [class.odd]="odd"></app-content-card>
 

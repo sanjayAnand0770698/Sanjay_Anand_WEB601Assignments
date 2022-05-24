@@ -1,1 +1,23 @@
-<p>content-card works!</p>
+
+<div class="contentItem-card-wrapper">
+    <img class="contentItem-image" (click)="displayId()" src="{{contentItem?.imagelink }}">
+    <div class="contentItem-body">
+      <strong>Body:</strong> <br>
+      {{contentItem?.body }}
+    </div>
+    <div class="contentItem-author">
+      <strong>Authors:</strong> {{ contentItem?.author }}
+    </div>
+    <div class="contentItem-title">
+      <strong>Title:</strong> {{ contentItem?.title }}
+    </div>
+    <div class="contentItem-type">
+      <strong>Type:</strong> {{ contentItem?.type }}
+    </div>
+    <div class="contentItem-tags" *ngIf="contentItem?.hashtags">
+      <h4>Tags:</h4>
+      <div *ngFor="let tag of contentItem?.hashtags">
+        {{ tag }}
+      </div>
+    </div>
+  </div>
