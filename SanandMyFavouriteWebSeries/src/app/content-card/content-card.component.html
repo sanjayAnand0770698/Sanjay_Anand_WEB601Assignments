@@ -1,5 +1,7 @@
 
 <div class="contentItem-card-wrapper">
+  <div class="contentItem-title">
+   <header>{{contentItem?.title }}</header>
     <img class="contentItem-image" (click)="displayId()" src="{{contentItem?.imagelink }}">
     <div class="contentItem-body">
       <strong>Body:</strong> <br>
@@ -8,8 +10,7 @@
     <div class="contentItem-author">
       <strong>Authors:</strong> {{ contentItem?.author }}
     </div>
-    <div class="contentItem-title">
-      <strong>Title:</strong> {{ contentItem?.title }}
+  
     </div>
     <div class="contentItem-type">
       <strong>Type:</strong> {{ contentItem?.type }}
