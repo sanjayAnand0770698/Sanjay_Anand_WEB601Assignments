@@ -8,6 +8,7 @@
     <p *ngIf="result == 'Not Exist'" class="not-Exist">{{ result }} </p>
   </div>
   
+
 <h2>Series without types</h2>
 
 <app-content-card *ngFor="let Item of (seriesList | seriesType: '');"  [contentItem]="Item" [class.noType]="Item"></app-content-card>
