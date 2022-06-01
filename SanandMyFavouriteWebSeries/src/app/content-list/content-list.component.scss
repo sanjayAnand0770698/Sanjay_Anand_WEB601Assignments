@@ -2,3 +2,25 @@ h1{
     text-align: center;
     color:maroon;
 }
+
+h2{
+    text-align: center;
+    color: aqua;
+}
+.Exist{
+    color: green;
+  }
+  
+  .not-Exist{
+    color: red;
+  }
+.search-box{
+    background-color: grey  ;
+    border: 1px solid blue;
+    width: 30%;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}

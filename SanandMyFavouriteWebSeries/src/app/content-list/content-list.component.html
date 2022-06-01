@@ -1,4 +1,22 @@
+<h1>Web Series</h1>
 
-<h1> Web Series</h1>
-<app-content-card *ngFor="let contentItem of seriesList; odd as odd" [contentItem]="contentItem" [class.odd]="odd"></app-content-card>
+<div class="search-box">
+    <p>Search Author</p>
+    <input type="text" placeholder="Enter Author" #searchBox>
+    <button (click)=titleFilter(searchBox.value)>Submit</button>
+    <p *ngIf="result == 'Exist'" class="Exist">{{ result }}</p>
+    <p *ngIf="result == 'Not Exist'" class="not-Exist">{{ result }} </p>
+  </div>
+  
+<h2>Series without types</h2>
+
+<app-content-card *ngFor="let Item of (seriesList | seriesType: '');"  [contentItem]="Item" [class.noType]="Item"></app-content-card>
+
+<h2>Sitcom Series</h2>
+<app-content-card *ngFor="let Item of (seriesList | seriesType: 'sitcom');"  [contentItem]="Item" [class.firstType]="Item"></app-content-card>
+<h2>Comedy Series</h2>
+<app-content-card *ngFor="let Item of (seriesList | seriesType: 'comedy');"  [contentItem]="Item" [class.secondType]="Item"></app-content-card>
+<h2>Crime Series</h2>
+<app-content-card *ngFor="let Item of (seriesList | seriesType: 'crime');"  [contentItem]="Item" [class.thirdType]="Item"></app-content-card>
+
 

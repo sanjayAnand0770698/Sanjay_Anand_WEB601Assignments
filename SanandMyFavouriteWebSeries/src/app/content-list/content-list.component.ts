@@ -7,6 +7,7 @@ import { Content } from '../models/content';
   styleUrls: ['./content-list.component.scss']
 })
 export class ContentListComponent implements OnInit {
+  result?:string;
 seriesList: Content[];
   constructor() {
     this.seriesList = [{
@@ -16,7 +17,7 @@ seriesList: Content[];
       author:
         "Carter Bays-Craig Thomas",
       imagelink:"https://static.wikia.nocookie.net/himym/images/4/46/HIMYM_poster.jpg",
-      type:"Sitcom",
+      type:"sitcom",
       hashtags:["himym", "legendary"] },
       {
         id: 1,
@@ -75,6 +76,26 @@ seriesList: Content[];
   }
 
   ngOnInit(): void {
+  }
+  titleFilter(input: string): any{
+    //console.log(input);
+    for (let i=0; i<=7; i++ ){
+      // console.log(typeof(this.rockets[i].title));
+      console.log(this.seriesList[5].author);
+      console.log(i);
+      if( this.seriesList[i].author == input){
+        console.log(i);
+        console.log(input);
+        this.result = 'Exist';
+        return this.result;
+        //console.log(true);
+      }
+      else
+      {
+        this.result = 'Not Exist';
+        console.log(false);
+      }
+    }
   }
 
 }
