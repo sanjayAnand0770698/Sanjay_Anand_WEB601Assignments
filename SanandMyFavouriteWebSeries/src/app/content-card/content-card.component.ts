@@ -9,6 +9,11 @@ import { Content } from '../models/content';
 })
 export class ContentCardComponent implements OnInit {
   @Input() contentItem?: Content;
+  @Input() isLastItem: boolean = false;
+
+  defaultImagePath = "assets/default-image.png";
+  titleColour = "#00FF00";
+  tagColour = "#1e88e5";
   constructor() { }
 
   ngOnInit(): void {

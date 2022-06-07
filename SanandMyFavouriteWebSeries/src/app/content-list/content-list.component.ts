@@ -16,7 +16,7 @@ seriesList: Content[];
       body:"How I Met Your Mother (often abbreviated as HIMYM) is an American sitcom, created by Craig Thomas and Carter Bays for CBS. The series, which aired from 2005 ...",
       author:
         "Carter Bays-Craig Thomas",
-      imagelink:"https://static.wikia.nocookie.net/himym/images/4/46/HIMYM_poster.jpg",
+      imagelink:"",
       type:"sitcom",
       hashtags:["himym", "legendary"] },
       {
