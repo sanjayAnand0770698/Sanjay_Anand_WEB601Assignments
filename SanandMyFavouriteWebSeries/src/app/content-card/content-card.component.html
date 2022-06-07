@@ -1,31 +1,29 @@
-
-
-<div class="contentItem-card-wrapper">
+<div class="contentItem-card-wrapper" *ngIf="contentItem">
   <div class="contentItem-title">
-   <header>{{contentItem?.title }}</header>
-   <div *ngIf="contentItem.imagelink;else defaultImage">
-    <img class="contentItem-image" (click)="displayId()" src="{{contentItem.imagelink }}">
-  </div>
-  <!--Default Image-->
-  <ng-template #defaultImage>
-    <img class="contentItem-image" (click)="displayId()" src="{{defaultImagePath}}">
-  </ng-template>
+    <header appHighlightImportantData [colour]="titleColour" [isTitle]="true">{{contentItem?.title }}</header>
+    <div *ngIf="contentItem.imagelink;else defaultImage">
+      <img class="contentItem-image" (click)="displayId()" src="{{contentItem.imagelink }}">
+    </div>
+    <!--Default Image-->
+    <ng-template #defaultImage>
+      <img class="contentItem-image" (click)="displayId()" src="{{defaultImagePath}}">
+    </ng-template>
     <div class="contentItem-body">
       <strong>Body:</strong> <br>
       {{contentItem?.body }}
     </div>
-    <div class="contentItem-author">
+    <div class="contentItem-author" appHighlightImportantData [isAuthor]="isLastItem">
       <strong>Authors:</strong> {{ contentItem?.author }}
     </div>
-  
-    </div>
-    <div class="contentItem-type">
-      <strong>Type:</strong> {{ contentItem?.type }}
-    </div>
-    <div class="contentItem-tags" *ngIf="contentItem?.hashtags">
-      <h4>Tags:</h4>
-      <div *ngFor="let tag of contentItem?.hashtags">
-        {{ tag }}
-      </div>
+
+  </div>
+  <div class="contentItem-type" appHighlightImportantData [isType]="true">
+    <strong>Type:</strong> {{ contentItem?.type }}
+  </div>
+  <div class="contentItem-tags" *ngIf="contentItem?.hashtags">
+    <h4>Tags:</h4>
+    <div *ngFor="let tag of contentItem?.hashtags">
+      <p appHighlightImportantData [isTag]="true" [colour]="tagColour">{{ tag }}</p>
     </div>
   </div>
+</div>
