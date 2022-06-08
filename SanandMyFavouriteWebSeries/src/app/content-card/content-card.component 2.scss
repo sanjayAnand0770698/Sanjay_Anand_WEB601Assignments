@@ -1,0 +1,28 @@
+:host {
+    display: block;
+    width: 450px;
+    text-align: center;
+    margin: 8px auto;
+    border: 2px solid #000;
+    padding: 8px;
+  
+    &.odd {
+      // & means this selector is applied directly to :host
+      background-color: lightgray;
+    }
+    .image-wrapper{
+        margin-top: 50px;
+        text-align: center;}
+    
+        img{
+            width: 200px;
+            height:200px;
+            display:  block;
+            margin: 0 auto;
+          }
+    
+          span {
+            background-color:chartreuse;
+            display: inline-block;
+          }
+}
