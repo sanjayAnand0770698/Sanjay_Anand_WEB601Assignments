@@ -6,11 +6,11 @@ import { Content } from './models/content';
 export class BorderPipePipe implements PipeTransform {
 
   transform(seriesList: Content[], SeriesType?: string): Content[] {
-    if(SeriesType){
-      return seriesList.filter(series=>series.type==SeriesType);
+    if (SeriesType) {
+      return seriesList.filter(series => series.type == SeriesType);
     }
-    else{
-      return seriesList.filter(series=>series.type==null);
+    else {
+      return seriesList.filter(series => series.type == null);
     }
   }
 

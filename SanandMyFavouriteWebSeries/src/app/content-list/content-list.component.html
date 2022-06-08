@@ -1,28 +1,26 @@
 <h1>Web Series</h1>
 
 <div class="search-box">
-    <p>Search Author</p>
-    <input type="text" placeholder="Enter Author" #searchBox>
-    <button (click)=titleFilter(searchBox.value)>Submit</button>
-    <p *ngIf="result == 'Exist'" class="Exist">{{ result }}</p>
-    <p *ngIf="result == 'Not Exist'" class="not-Exist">{{ result }} </p>
-  </div>
-  
-  <h2>Series without types</h2>
-
-  <app-content-card *ngFor="let Item of (seriesList | seriesType: '');let isLast = last" [contentItem]="Item"
-    [class.noType]="Item" [isLastItem]="isLast">
-  </app-content-card>
-  
-  <h2>Sitcom Series</h2>
-  <app-content-card *ngFor="let Item of (seriesList | seriesType: 'sitcom');let isLast = last" [contentItem]="Item"
-    [class.firstType]="Item" [isLastItem]="isLast"></app-content-card>
-  <h2>Comedy Series</h2>
-  <app-content-card *ngFor="let Item of (seriesList | seriesType: 'comedy');let isLast = last" [contentItem]="Item"
-    [class.secondType]="Item" [isLastItem]="isLast"></app-content-card>
-  <h2>Crime Series</h2>
-  <app-content-card *ngFor="let Item of (seriesList | seriesType: 'crime');let isLast = last" [contentItem]="Item"
-    [class.thirdType]="Item" [isLastItem]="isLast"></app-content-card>
-  
+  <p>Search Author</p>
+  <input type="text" placeholder="Enter Author" #searchBox>
+  <button (click)=titleFilter(searchBox.value)>Submit</button>
+  <p *ngIf="result == 'Exist'" class="Exist">{{ result }}</p>
+  <p *ngIf="result == 'Not Exist'" class="not-Exist">{{ result }} </p>
+</div>
 
 
+<h2>Series without types</h2>
+
+<app-content-card *ngFor="let Item of (seriesList | seriesType: '');let isLast = last" [contentItem]="Item"
+  [class.noType]="Item" [isLastItem]="isLast">
+</app-content-card>
+
+<h2>Sitcom Series</h2>
+<app-content-card *ngFor="let Item of (seriesList | seriesType: 'sitcom');let isLast = last" [contentItem]="Item"
+  [class.firstType]="Item" [isLastItem]="isLast"></app-content-card>
+<h2>Comedy Series</h2>
+<app-content-card *ngFor="let Item of (seriesList | seriesType: 'comedy');let isLast = last" [contentItem]="Item"
+  [class.secondType]="Item" [isLastItem]="isLast"></app-content-card>
+<h2>Crime Series</h2>
+<app-content-card *ngFor="let Item of (seriesList | seriesType: 'crime');let isLast = last" [contentItem]="Item"
+  [class.thirdType]="Item" [isLastItem]="isLast"></app-content-card>

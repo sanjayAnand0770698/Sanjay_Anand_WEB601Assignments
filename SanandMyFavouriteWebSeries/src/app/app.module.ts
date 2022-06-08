@@ -7,6 +7,7 @@ import { ContentCardComponent } from './content-card/content-card.component';
 
 import { SeriesTypePipe } from './series-type.pipe';
 import { BorderPipePipe } from './border-pipe.pipe';
+import { HighlightImportantDataDirective } from './directives/highlight-important-data.directive';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { BorderPipePipe } from './border-pipe.pipe';
     ContentListComponent,
     ContentCardComponent,
     SeriesTypePipe,
-    BorderPipePipe
+    BorderPipePipe,
+    HighlightImportantDataDirective
   ],
   imports: [
     BrowserModule

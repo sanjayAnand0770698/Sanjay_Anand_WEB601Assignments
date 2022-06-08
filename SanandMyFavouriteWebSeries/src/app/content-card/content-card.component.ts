@@ -21,6 +21,6 @@ export class ContentCardComponent implements OnInit {
 
 
   displayId(): void {
-    console.log('Current id is: ', this.contentItem?.id ,this.contentItem?.title);
+    console.log('Current id is: ', this.contentItem?.id, this.contentItem?.title);
   }
 }
