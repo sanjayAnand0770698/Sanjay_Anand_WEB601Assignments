@@ -10,8 +10,6 @@
     "generateInterface": "ng generate interface",
     "generateClass": "ng generate class",
     "generateComponent": "ng generate component"
-   
-
   },
   "private": true,
   "dependencies": {
